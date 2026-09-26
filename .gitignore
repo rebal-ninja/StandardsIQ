@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+.streamlit/
+data/vectorstore/
+test_output.txt
+team_results.json

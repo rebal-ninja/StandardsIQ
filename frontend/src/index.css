@@ -1,0 +1,219 @@
+/* ─── CSS Custom Properties ──────────────────────────────────────────────────── */
+:root {
+  --bg-base:       #0A0E17;
+  --bg-surface:    rgba(255, 255, 255, 0.04);
+  --bg-surface-2:  rgba(255, 255, 255, 0.07);
+
+  --accent-teal:   #2DD4BF;
+  --accent-amber:  #F5A524;
+  --accent-red:    #F3554F;
+
+  --text-primary:  #EDF1F7;
+  --text-muted:    #8A94A6;
+
+  --font-sans: 'Inter', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Courier New', monospace;
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Focus visible ──────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ─── Typography helpers ─────────────────────────────────────────────────────── */
+.mono {
+  font-family: var(--font-mono);
+}
+
+a {
+  color: var(--accent-teal);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-sans);
+}
+
+/* ─── Reused page-level layout ───────────────────────────────────────────────── */
+/* These live here so all pages can rely on them without separate imports */
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+}
+
+.page-sub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Shared chip button (dashboard examples, verify examples, search examples) */
+.dash-hero__chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-family: var(--font-sans);
+  font-size: 0.775rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+
+.dash-hero__chip:hover {
+  color: var(--text-primary);
+  border-color: rgba(45, 212, 191, 0.3);
+  background: rgba(45, 212, 191, 0.06);
+}
+
+/* Shared compare bar buttons (used across search, recommend, scan) */
+.compare-bar__clear {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-muted);
+  border-radius: 6px;
+  padding: 5px 14px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.compare-bar__clear:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  color: var(--text-primary);
+}
+
+.compare-bar__go {
+  background: var(--accent-teal);
+  border: none;
+  color: #0A0E17;
+  border-radius: 6px;
+  padding: 5px 16px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.compare-bar__go:hover {
+  opacity: 0.85;
+}
+
+/* search-page meta (shared by Search + Recommend) */
+.search-page__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  min-height: 20px;
+}
+
+.search-page__meta-item {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.search-page__meta-warn {
+  font-size: 0.75rem;
+  color: var(--accent-amber);
+  font-weight: 500;
+}
+
+.search-page__compare-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.25);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  flex-wrap: wrap;
+}
+
+/* Spinner keyframe used by multiple components */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.search-bar__spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(10, 14, 23, 0.3);
+  border-top-color: #0A0E17;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}

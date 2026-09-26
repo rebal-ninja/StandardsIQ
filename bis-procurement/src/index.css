@@ -1,0 +1,116 @@
+/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+/* ── Tailwind v4 theme tokens ─────────────────────────────────────────────── */
+@theme {
+  --color-bg-base:        #0A0E17;
+  --color-bg-glow-1:      #142033;
+  --color-glass-surface:  rgba(255,255,255,0.06);
+  --color-glass-border:   rgba(255,255,255,0.12);
+  --color-accent-teal:    #2DD4BF;
+  --color-accent-amber:   #F5A524;
+  --color-accent-red:     #F3554F;
+  --color-text-primary:   #EDF1F7;
+  --color-text-muted:     #8A94A6;
+
+  --font-family-sans:     'Manrope', 'Segoe UI', sans-serif;
+  --font-family-mono:     'JetBrains Mono', 'Consolas', monospace;
+}
+
+/* ── Base reset & globals ─────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #0A0E17;
+  color: #EDF1F7;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+/* ── Utility classes (used by existing components) ────────────────────────── */
+.glass-surface {
+  background: rgba(255,255,255,0.06);
+}
+
+.glass-border {
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.mono {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+}
+
+/* ── Scrollbar styling ────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.03);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ── Reduced motion ───────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Landing page specific ────────────────────────────────────────────────── */
+.landing-gradient-text {
+  background: linear-gradient(135deg, #EDF1F7 0%, #2DD4BF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.architecture-line {
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(to bottom, rgba(45,212,191,0.6), rgba(45,212,191,0.1));
+  margin: 0 auto;
+}
+
+.cta-glow {
+  box-shadow: 0 0 24px rgba(45,212,191,0.25), 0 0 48px rgba(45,212,191,0.1);
+  transition: box-shadow 0.3s ease;
+}
+.cta-glow:hover {
+  box-shadow: 0 0 32px rgba(45,212,191,0.4), 0 0 64px rgba(45,212,191,0.2);
+}
+
+.search-focus-glow:focus-within {
+  box-shadow: 0 0 0 1px rgba(45,212,191,0.4), 0 0 24px rgba(45,212,191,0.12);
+}
+
+/* ── Animated grid background for landing ────────────────────────────────── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}

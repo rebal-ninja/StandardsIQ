@@ -1,0 +1,60 @@
+.error-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgba(243, 85, 79, 0.1);
+  border: 1px solid rgba(243, 85, 79, 0.3);
+  border-radius: 10px;
+  padding: 14px 18px;
+  flex-wrap: wrap;
+}
+
+.error-banner__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.error-banner__icon {
+  font-size: 1.1rem;
+  color: var(--accent-red);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.error-banner__label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-red);
+  margin-bottom: 2px;
+}
+
+.error-banner__msg {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.error-banner__retry {
+  background: rgba(243, 85, 79, 0.15);
+  color: var(--accent-red);
+  border: 1px solid rgba(243, 85, 79, 0.35);
+  border-radius: 7px;
+  padding: 7px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.error-banner__retry:hover {
+  background: rgba(243, 85, 79, 0.25);
+}

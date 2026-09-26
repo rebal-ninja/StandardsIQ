@@ -1,0 +1,109 @@
+Starting API tests...
+======================================================================
+  END-TO-END API TEST  -  http://localhost:8000/api/discover
+======================================================================
+
+QUERY   : ordinary portland cement for construction
+Expected: Construction  |  ['IS 269', 'IS 8112', 'IS 12269']
+  matched_by  : Retriever + LLM
+  latency     : 6.480s  (wall: 8.558s)
+  retrieved   : ['IS 269:2015', 'IS 8112:1989']
+  [HIT] expected standard found in recommendations
+    [1] IS 269:2015
+         This standard covers Ordinary Portland Cement (OPC) in various grades, including OPC 33, OPC 43, and
+    [2] IS 8112:1989
+         This standard specifically addresses 43-grade Ordinary Portland Cement, which is a common choice for
+
+QUERY   : LED street lights for municipal roads
+Expected: Electrical  |  ['IS 10322', 'IS 16107']
+  matched_by  : Retriever + LLM
+  latency     : 4.160s  (wall: 6.190s)
+  retrieved   : ['IS 10322 (Part 5/Sec 3):2013', 'IS 16107:2012']
+  [HIT] expected standard found in recommendations
+    [1] IS 10322 (Part 5/Sec 3):2013
+         This standard specifically addresses road and street lighting luminaires, including LED street light
+    [2] IS 16107:2012
+         While general, this standard sets performance requirements for LED lamps relevant to street lighting
+
+QUERY   : electrical cables for public buildings
+Expected: Electrical  |  ['IS 694', 'IS 1554']
+  matched_by  : Retriever + LLM
+  latency     : 3.366s  (wall: 5.406s)
+  retrieved   : ['IS 1554 (Part 1):1988', 'IS 694:2010']
+  [HIT] expected standard found in recommendations
+    [1] IS 1554 (Part 1):1988
+         Specifies requirements for PVC insulated heavy-duty electric cables for power distribution in public
+    [2] IS 694:2010
+         Covers PVC insulated cables for fixed wiring installations in buildings and public infrastructure up
+
+QUERY   : hospital examination gloves
+Expected: Healthcare  |  ['IS 4148', 'IS 15223', 'IS 13940']
+  matched_by  : Retriever + LLM
+  latency     : 2.581s  (wall: 4.621s)
+  retrieved   : ['IS 15223:2015']
+  [HIT] expected standard found in recommendations
+    [1] IS 15223:2015
+         This standard specifies symbols to be used on labels and instructions for medical devices, including
+
+QUERY   : agricultural water pumps irrigation
+Expected: Agriculture  |  ['IS 8034', 'IS 9137']
+  matched_by  : Retriever + LLM
+  latency     : 3.298s  (wall: 5.344s)
+  retrieved   : ['IS 1520:1980', 'IS 8034:2002']
+  [HIT] expected standard found in recommendations
+    [1] IS 1520:1980
+         This standard specifies requirements for horizontal centrifugal pumps used for agricultural irrigati
+    [2] IS 8034:2002
+         This standard covers submersible pumpsets for lifting water from wells, which are commonly used in a
+
+QUERY   : food packaging materials quality
+Expected: Food  |  ['IS 1397', 'IS 1166', 'IS 1070']
+  matched_by  : Retriever + LLM
+  latency     : 3.696s  (wall: 5.748s)
+  retrieved   : ['IS 15495:2020', 'IS 4006 (Part 1):2024']
+  [PARTIAL] recommendations returned but none matched expected IDs
+    (expected one of: ['IS 1397', 'IS 1166', 'IS 1070'])
+    [1] IS 15495:2020
+         This standard specifically addresses printing ink for food packaging, which is directly related to t
+    [2] IS 4006 (Part 1):2024
+         This standard covers methods of test for paper and pulp-based packaging materials, including propert
+
+QUERY   : steel structural members for bridges
+Expected: Construction  |  ['IS 2062', 'IS 1786']
+  matched_by  : Retriever + LLM
+  latency     : 2.780s  (wall: 4.824s)
+  retrieved   : ['IS 2062:2011']
+  [HIT] expected standard found in recommendations
+    [1] IS 2062:2011
+         This standard specifically covers hot-rolled structural steel used in bridges, making it directly ap
+
+QUERY   : automotive brake components motor vehicle
+Expected: Automotive  |  ['IS 9400', 'IS 15464', 'IS 15627']
+  matched_by  : Retriever + LLM
+  latency     : 2.807s  (wall: 4.842s)
+  retrieved   : ['IS 9400 (Part 1):1979']
+  [HIT] expected standard found in recommendations
+    [1] IS 9400 (Part 1):1979
+         This standard directly addresses automotive brake components, specifically hydraulic brake hose asse
+
+======================================================================
+  RESULTS SUMMARY
+======================================================================
+  Total queries : 8
+  HIT           : 7
+  PARTIAL       : 1
+  MISS (empty)  : 0
+  ERRORS        : 0
+
+  [HIT] Construction           ordinary portland cement for construction
+  [HIT] Electrical             LED street lights for municipal roads
+  [HIT] Electrical             electrical cables for public buildings
+  [HIT] Healthcare             hospital examination gloves
+  [HIT] Agriculture            agricultural water pumps irrigation
+  [REC] Food                   food packaging materials quality
+  [HIT] Construction           steel structural members for bridges
+  [HIT] Automotive             automotive brake components motor vehicle
+======================================================================
+
+RESULT_JSON: [{"query": "ordinary portland cement for construction", "expected_domain": "Construction", "expected_ids": ["IS 269", "IS 8112", "IS 12269"], "retrieved_ids": ["IS 269:2015", "IS 8112:1989"], "matched_by": "Retriever + LLM", "latency": 6.4801, "hit": true, "non_empty": true}, {"query": "LED street lights for municipal roads", "expected_domain": "Electrical", "expected_ids": ["IS 10322", "IS 16107"], "retrieved_ids": ["IS 10322 (Part 5/Sec 3):2013", "IS 16107:2012"], "matched_by": "Retriever + LLM", "latency": 4.1595, "hit": true, "non_empty": true}, {"query": "electrical cables for public buildings", "expected_domain": "Electrical", "expected_ids": ["IS 694", "IS 1554"], "retrieved_ids": ["IS 1554 (Part 1):1988", "IS 694:2010"], "matched_by": "Retriever + LLM", "latency": 3.3664, "hit": true, "non_empty": true}, {"query": "hospital examination gloves", "expected_domain": "Healthcare", "expected_ids": ["IS 4148", "IS 15223", "IS 13940"], "retrieved_ids": ["IS 15223:2015"], "matched_by": "Retriever + LLM", "latency": 2.5814, "hit": true, "non_empty": true}, {"query": "agricultural water pumps irrigation", "expected_domain": "Agriculture", "expected_ids": ["IS 8034", "IS 9137"], "retrieved_ids": ["IS 1520:1980", "IS 8034:2002"], "matched_by": "Retriever + LLM", "latency": 3.2978, "hit": true, "non_empty": true}, {"query": "food packaging materials quality", "expected_domain": "Food", "expected_ids": ["IS 1397", "IS 1166", "IS 1070"], "retrieved_ids": ["IS 15495:2020", "IS 4006 (Part 1):2024"], "matched_by": "Retriever + LLM", "latency": 3.6964, "hit": false, "non_empty": true}, {"query": "steel structural members for bridges", "expected_domain": "Construction", "expected_ids": ["IS 2062", "IS 1786"], "retrieved_ids": ["IS 2062:2011"], "matched_by": "Retriever + LLM", "latency": 2.7799, "hit": true, "non_empty": true}, {"query": "automotive brake components motor vehicle", "expected_domain": "Automotive", "expected_ids": ["IS 9400", "IS 15464", "IS 15627"], "retrieved_ids": ["IS 9400 (Part 1):1979"], "matched_by": "Retriever + LLM", "latency": 2.8073, "hit": true, "non_empty": true}]
+Tests completed. HIT rate: 7/8

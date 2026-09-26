@@ -1,0 +1,52 @@
+Total documents: 4429
+Distinct embeddings with metadata: 4429
+Domain distribution (16 domains):
+  CHD: 2156
+  LITD: 1698
+  WRD: 483
+  Construction: 28
+  Healthcare: 10
+  Quality Management: 10
+  Electrical: 6
+  Mechanical: 5
+  Safety: 5
+  General Engineering: 5
+  Food: 4
+  Textile: 4
+  Automotive: 4
+  Electronics: 4
+  Chemicals: 4
+  Agriculture: 3
+Records with scope: 92 / 4429
+Records with title: 4429 / 4429
+Records with source: 4429 / 4429
+Records with source_document (PDF compendium): 32 / 4429
+Records with keywords: 92 / 4429
+Records with status: 92 / 4429
+Records with year: 92 / 4429
+Records with revision: 10 / 4429
+Records with type_of_standard: 4337 / 4429
+Records with amendment_no: 15 / 4429
+Records with date_of_publish: 4282 / 4429
+Records with degree_of_equivalence: 4337 / 4429
+Records with bis_division: 4337 / 4429
+Duplicate standard_ids: 1
+  IS 13252 (Part 1):2010: 2
+Malformed standard_ids: 3
+  SP 55:1993
+  IEC 61000 (Part 5/Sec 2):2026
+  IEC 61196 (Part 1/Sec 105):2026
+Empty title: 0 / 4429
+Empty scope: 4337 / 4429
+Empty domain: 0 / 4429
+Empty standard_id: 0 / 4429
+Source distribution:
+  BIS Published Standards List — CHD (Excel catalogue): 2156
+  BIS Published Standards List — LITD (Excel catalogue): 1698
+  BIS Published Standards List — WRD (Excel catalogue): 483
+  BIS catalogue (publicly known standard): 59
+  BIS Compendium of Cement Standards (PDF): 16
+  BIS Compendium on Quality Management System Standards (PDF): 10
+  BIS Compendium of Indian Standards on Assistive Products (PDF): 6
+  BIS catalogue (superseded by IS 8042:2015): 1
+Dataset analysis complete

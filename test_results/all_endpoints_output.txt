@@ -1,0 +1,30 @@
+=== API ENDPOINT TESTS ===
+
+GET /health
+  HTTP 200 in 2.086s | has_json=True | len=50
+
+GET /api/metadata
+  HTTP 200 in 2.033s | has_json=True | len=221
+
+POST /api/discover
+  HTTP 200 in 8.103s | has_json=True | len=300
+
+POST /api/insights
+  HTTP 200 in 19.673s | has_json=False | len=300
+
+=== NEGATIVE QUERY TESTS ===
+  '...uantum computing hardware' -> HTTP 200 | 0 recs | scores=[]
+  '...ecommendations for friday' -> HTTP 200 | 0 recs | scores=[]
+  '...weather forecast tomorrow' -> HTTP 200 | 0 recs | scores=[]
+  '...ecipe for chicken biryani' -> HTTP 200 | 0 recs | scores=[]
+  '...gaming laptop under 50000' -> HTTP 200 | 0 recs | scores=[]
+
+=== SPECIAL CHARACTER TESTS ===
+  'IS 269:2015 specification check...' -> HTTP 200 | ids=[]
+  'ordinary portland cement OPC - 43 G...' -> HTTP 200 | ids=[]
+  'PVC cable / wire 1100V (Part 1)...' -> HTTP 200 | ids=[]
+  'steel bars 1/2 inch Fe500...' -> HTTP 200 | ids=[]
+
+=== EMPTY / INVALID INPUTS ===
+  POST /api/discover body={'description': ''} -> HTTP 400
+  POST /api/discover body={'description': '   '} -> HTTP 400

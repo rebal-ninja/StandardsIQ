@@ -1,0 +1,16 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+starlette==0.27.0
+anyio==3.7.1
+google-generativeai
+langchain
+langchain-community
+langchain-google-genai
+pymupdf
+chromadb
+sentence-transformers
+python-dotenv
+tqdm
+pandas
+langchain-groq

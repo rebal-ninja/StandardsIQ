@@ -1,0 +1,36 @@
+# StandardsIQ — backend dependencies
+# Install from the repo root:  pip install -r backend/requirements.txt
+
+# Web framework
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+starlette==0.27.0
+anyio==3.7.1
+python-multipart==0.0.9
+
+# Environment
+python-dotenv==1.0.0
+
+# PDF extraction (tender scanner)
+pymupdf>=1.23.0
+
+# LLM client (OmniRoute / OpenAI-compatible)
+openai>=1.35.0
+
+# Vector database
+chromadb>=0.5.0
+
+# Embeddings
+sentence-transformers>=3.0.0
+
+# LangChain (vector store wrapper used by rag_pipeline.py)
+langchain>=0.2.5
+langchain-community>=0.2.5
+langchain-core>=0.2.8
+langchain-text-splitters>=0.2.1
+langchain-huggingface>=0.0.3
+
+# Data utilities
+tqdm
+pandas

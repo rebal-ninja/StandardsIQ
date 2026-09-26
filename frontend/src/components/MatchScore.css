@@ -1,0 +1,21 @@
+.match-score {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.match-score svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.match-score__value {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  z-index: 1;
+}

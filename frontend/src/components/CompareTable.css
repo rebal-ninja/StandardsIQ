@@ -1,0 +1,124 @@
+.compare-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 560px;
+}
+
+.compare-table thead tr {
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.compare-table th {
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.compare-table__field-col {
+  width: 130px;
+  min-width: 100px;
+}
+
+.compare-table__std-col {
+  min-width: 200px;
+}
+
+.compare-table__std-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.compare-table__std-id {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.compare-table__remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+
+.compare-table__remove:hover {
+  color: var(--accent-red);
+}
+
+.compare-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.15s;
+}
+
+.compare-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.compare-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.compare-table__row--diff {
+  background: rgba(245, 165, 36, 0.04) !important;
+}
+
+.compare-table__label {
+  padding: 14px 18px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.compare-table__diff-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-amber);
+  flex-shrink: 0;
+}
+
+.compare-table__cell {
+  padding: 14px 18px;
+  color: var(--text-primary);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.compare-table__cell.mono {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.compare-table__empty {
+  color: var(--text-muted);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
