@@ -1,16 +1,7 @@
 {
-  "buildCommand": "cd frontend && npm install && npm run build",
-  "outputDirectory": "frontend/build",
-  "functions": {
-    "api/index.py": {
-      "runtime": "python3.11"
-    }
-  },
+  "buildCommand": "cd bis-procurement && npm install && npm run build",
+  "outputDirectory": "bis-procurement/dist",
   "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/api"
-    },
     {
       "source": "/:path*",
       "destination": "/index.html"
