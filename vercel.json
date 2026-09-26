@@ -1,6 +1,7 @@
 {
-  "buildCommand": "cd bis-procurement && npm install && npm run build",
+  "buildCommand": "cd bis-procurement && npm run build",
   "outputDirectory": "bis-procurement/dist",
+  "installCommand": "cd bis-procurement && npm install",
   "rewrites": [
     {
       "source": "/:path*",
